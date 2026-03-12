@@ -1,0 +1,17 @@
+pipeline
+    agent any
+
+    triggers {
+       githubpush()
+    }
+
+    stages {
+       stage('Build') {
+           steps {
+	       echo "Build triggered successfully!"
+	       sh 'date'
+	       sh 'whoami'
+	    }
+	}
+     }
+}
